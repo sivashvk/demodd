@@ -16,3 +16,23 @@ docker stop ee5b999829fc
 docker run -dit -p 1234:80 mywebsite:v1
 docker build -t mywebsite:v1 .
 -----------------------------------------------------------
+
+
+2nd commit
+
+docker ps -a
+ls
+cd share/
+docker exec -it 43148cbf76c5 /bin/bash
+cd ..
+docker run -d --name mycl -v /home/user/krishna/apache_folder/share/:/tmp/ mywebsite:v2
+pwd
+docker run -d --name mycl -v share/:/tmp/ mywebsite:v2
+docker run -d --name myclass1 -v share/:/tmp/ mywebsite:v2
+docker run -d --name myclass -v share/:/tmp/ mywebsite:v2
+docker stop a42b57261d95 && docker rm a42b57261d95
+docker exec -it a42b57261d95 /bin/bash
+docker run -d \
+  --name devtest \
+  --mount source=app_data,target=/data \
+  mywebsite:v2

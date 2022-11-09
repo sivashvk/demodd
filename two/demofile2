@@ -1,0 +1,19 @@
+Note that this seems to require running this command in each repo for that repo to be reset with the new credentials. Hopefully there is a global solution. – 
+SeanRtS
+ Aug 14, 2021 at 19:08
+13
+This one perfectly worked for me. The above one with maximum vote didn't work. – 
+Kapilfreeman
+ Aug 14, 2021 at 20:55
+4
+Thanks! Using token as password not work, but adding this work awesome – 
+Syorito Hatsuki
+ Aug 16, 2021 at 4:28
+9
+This is very insecure, not only does it allow anyone on the local system with read access to the local repo control over that repo, git remote -v simply discloses the key giving the attacker account wide access to your GitHub account. – 
+Joshua Kolden
+ Aug 17, 2021 at 20:48
+5
+@ßãlãjî OS key managers and browsers take grate pains to secure credentials. Normal git workflow do not expose passwords or ssh private keys to other users with read access to a repo. The above advice does. It allows anyone with read access to a copy of a local repo, including for example a shared work or school filesystem, to see the user's clear text Personal Access Token. This extends to archived copies as well, such as source tarballs that retain the .git directory. – 
+Joshua Kolden
+ Aug 18, 2021 at 4:27
