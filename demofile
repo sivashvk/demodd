@@ -1,0 +1,18 @@
+docker rm ad77ed0fb1e3
+docker run -d -it --name=tender_hawking --mount source=app_data , destination=/data ad77ed0fb1e3
+docker exec -it ad77ed0fb1e3 /bin/bash
+docker exec -it ee5b999829fc /bin/bash
+rm nov03
+docker exec ee5b999829fc ls /tmp/krishna
+docker cp nov03 ee5b999829fc:/tmp/krishna/
+cat nov03
+docker exec ee5b999829fc ls /tmp
+docker exec ee5b999829fc mkdir /tmp/krishna
+docker logs ee5b999829fc
+sudo docker exec -it ee5b999829fc /bin/bash
+docker start ee5b999829fc
+docker ps
+docker stop ee5b999829fc
+docker run -dit -p 1234:80 mywebsite:v1
+docker build -t mywebsite:v1 .
+-----------------------------------------------------------
